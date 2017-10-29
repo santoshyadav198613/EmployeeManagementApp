@@ -1,0 +1,64 @@
+Files:
+1. tslint.json: This file will ask us to follow the typescript guidelines.
+2. tsconfig.json: typescript config file.
+3. protractor.conf.js: Automation testing config file.
+4. package.json: This is configuration file for node and NPM.
+5. karma.conf.js: This is configuration file for our unit testing.
+6. .angular-cli.json: This is angular CLI configuration file.
+
+Src: Most of the code goes inside this folder.
+
+node_modules: This is the folder where all 3rd party libraries are downloaded.
+
+e2e: This is where our Automation testing code is available.
+
+Src:
+1. typings.d.ts: This is a type definition file for node.
+2. tsconfig.spec.json: typescript config for unit testing.
+3. tsconfig.app.json: typescript config for our application.
+4. styles.css: You can define css globally.
+5. polyfills.ts: Will take care of browser compatibility issues.
+6. index.html: Our main page/master page.
+7. main.ts: Entry file for our angular App.
+
+Bootstrap process:
+It is loading application, any modules.
+
+Javascript/typescript Modules:
+1. Each file is a module.
+
+Angular Modules:
+1. We can keep all different fils related to a feature in a seperate module.
+2. Our app should have at least one module.
+3. In our application AppModule is by default our Root Module.
+
+
+@NgModule:
+1. It is a decorator, decorator is a desing pattern.
+It basically adds some extra functionality to our class.
+
+properties:
+1. declarations: This array will contain all the components/directives/pipes.
+2. imports: So before we can use any 3rd party modules, it has be registerd by 
+impots array.
+3. providers: It will be used to register the services.
+4. bootstrap: it will be our root/entry component.
+
+Component:
+1. Code reusability.
+2. HTML tags.
+3. Has view/template and its metadata.
+
+Angulr CLI creates 4 files for each Component.
+1. <component_name>.component.css -- css classes
+2. <component_name>.component.html -- our template
+3. <component_name>.component.spec.ts -- Unit Test case file
+4. <component_name>.component.ts -- metadata for component.
+
+@Component: This decorator will tell angular this class is component.
+properties:
+1. selector: this becomes our HTML tag. 
+2. templateUrl: gives the path for our view/template.
+3. template: to give inline html
+4. styleUrls: provide the css files.
+5. styles : Provide inline css.

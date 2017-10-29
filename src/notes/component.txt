@@ -1,0 +1,28 @@
+How to create a component
+1. ng g component/c <component_name>  
+
+Binding:
+1. Property Binding
+    Name : {{name}} //interpolation
+    we can use [] "box" syntax to do Property binding.
+2. Event Binding
+   we can use  () "Banana" syntax for event binding.
+
+
+Built-in directives:
+directives with * are structured directive.
+it modifies the actual DOM.
+1. *ngFor --  To bind an array.
+2. *ngIf -- It will add or remove the element from DOM.
+3. ngSwitch -- In case we want to remove /show dics based on some value.
+4. ngClass -- in case we want to assign some class dynamically
+
+Component Interaction:
+What:
+  communication between multiple components.
+How:
+1. Via HTML Tags
+    1.@Input() decortaor to send data to other component. use property binding
+    2.@Output() to send some data from child component.use event binding
+2. Via TypeScript
+3. Via service

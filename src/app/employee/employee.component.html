@@ -1,0 +1,29 @@
+<h1>
+  Employee Component
+</h1>
+
+Name : {{name}}
+<div *ngIf="toggle" [innerText]="department">
+  <!-- [hidden]="toggle" -->
+</div>
+
+<button (click)="toggleDiv()" class="btn btn-primary">Toggle</button>
+<div [ngClass]="{'col-md-6':toggle}">
+  <app-employee-list [empList]="employee" [title]="'Employee List'"
+  (message)="receiveFromChild($event)"
+  ></app-employee-list>
+</div>
+{{message}}
+
+
+<div [ngSwitch]="role">
+  <div *ngSwitchCase="'Admin'">
+    Welcome Admin
+  </div>
+  <div *ngSwitchCase="'User'">
+    Welcome {{name}}
+  </div>
+  <div *ngSwitchDefault>
+    Welcome User
+  </div>
+</div>
