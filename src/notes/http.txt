@@ -1,0 +1,21 @@
+Why:
+1. In realtime apps, we need to interact with API to get, post thee data.
+2. Http service will help us to achieve the same.
+
+Restfull:
+1. get
+2. post
+3. put
+4. delete
+5. jsonp
+
+
+How:
+1. import the http module import { HttpClientModule } from '@angular/common/http';.
+2. 
+
+
+Observable:
+it comes from rxjs library, and it is proposed feature for ES6.
+it uses Publish and Subsribe pattern.
+it also gives us data in streams.

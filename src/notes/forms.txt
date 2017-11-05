@@ -30,3 +30,6 @@ Validations:
 
 we can use control level validtion by using #varName="ngModel"
 and use #varName to access properties of input control.
+
+Reactive Forms:
+1. 
