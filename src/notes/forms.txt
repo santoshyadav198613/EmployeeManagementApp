@@ -1,0 +1,32 @@
+Forms:
+
+What/Why:
+1. To take user input.
+2. To collect the data.
+3. GUI to user, so user can figure out what to enter.
+
+Types of Forms:
+1. Template Driven Forms.
+2. Reactive Forms:
+
+How:
+1. Template Driven Forms:
+    1. import { FormsModule } from '@angular/forms';
+    2. register the FormsModule
+    3. create form
+    4. define the model
+    5. use ngModel using [()] "banana in the box"
+
+Validations:
+1. use novalidate to disable HTML5 Validations.
+2. create instnce of form by using #departmentForm="ngForm"
+3. pristine -- This is fresh state, where there are no changes on our form
+4. dirty - as soon as we make some changes to form, it become dirty.
+
+1. required -- To make our field as required.
+2. minlength
+3. maxlength
+4. pattern
+
+we can use control level validtion by using #varName="ngModel"
+and use #varName to access properties of input control.

@@ -1,3 +1,34 @@
-<p>
-  department works!
-</p>
+<h1>
+  Department Form
+</h1>
+
+{{department | json}} {{departmentForm.invalid}} {{departmentForm.value | json}} {{departmentForm.valid}} {{departmentForm.pristine}}
+{{departmentForm.dirty}}
+
+<form #departmentForm="ngForm" (submit)="addDepartment()" novalidate>
+  <div class="form-group">
+    <input class="form-control" required [(ngModel)]="department.id" name="id" type="number" #id="ngModel" placeholder="Department ID">
+    <div class="alert alert-danger" [hidden]="id.valid">
+      ID is required.
+    </div>
+    {{id.valid}} {{id.pristine}} {{id.dirty}} {{id.value}} {{id.invalid}}
+    {{id.errors| json}}
+  </div>
+  <div class="form-group">
+    <input class="form-control" required minlength="3" maxlength="10" [(ngModel)]="department.name" #name="ngModel" name="name" type="text" placeholder="Department Name">
+    {{name.errors | json}}
+  </div>
+  <div class="form-group">
+    <input class="form-control" required pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" [(ngModel)]="department.email"
+      name="email" type="email" placeholder="Deaprtment Email">
+  </div>
+  <div class="form-group">
+    <input class="form-control" required [(ngModel)]="department.specialization" name="specialization" type="text" placeholder="Deaprtment Specialization">
+  </div>
+  <div class="form-group">
+    <input class="form-control" [(ngModel)]="department.head" name="head" type="text" placeholder="Deaprtment Head">
+  </div>
+  <div>
+    <button [disabled]="departmentForm.invalid" class="form-control" type="submit" class="btn btn-primary">Save</button>
+  </div>
+</form>
