@@ -24,5 +24,21 @@ How:
 1. Via HTML Tags
     1.@Input() decortaor to send data to other component. use property binding
     2.@Output() to send some data from child component.use event binding
-2. Via TypeScript
+l2. Via TypeScript
+  1. @ViewChild : 
+    Use this decorator to access one tag of same type, it will create an 
+    instance of component in TS file.
+  2. @ViewChildren : In case we have multipl tags of same type use this decorator.  
 3. Via service
+
+
+Component Lifecycle:
+1. constructor: to inject services.
+2. ngOnInit:  This event will be called after constructor, and best event to load some 
+data from backend.
+3. ngOnChanges : It will help us to track the input properties with child component.
+4. ngDoCheck : This event will be called after init and after any event is fired.
+Never implement ngOnChanges and ngDoCheck together.
+5. ngAfterViewInit :Use this event to load data for ViewChilren component.
+6. ngOnDestroy :  This event will be called when our component
+get unloaded/destroyed.

@@ -1,0 +1,29 @@
+What is service:
+1. Which will contain the Business rules.
+2. Can be used for code reusability.
+3. It can be also used to interact with API/Backend.
+4. Pass data between components.
+
+How to create a service:
+1. Run "ng g service <service_name>"
+2. All services will have @Injectable decorator.
+
+How to use a service:
+1. Injet the service into components constructor.
+2. 
+
+What is DI:
+1. This stands for Dependecny Injection
+2. It is widely used Design Pattern.
+3. It says never create an instance of class directly into your class.
+4. Always inject the service/class.
+5. Angular has its own DI framework.
+
+Singleton:
+1. It is a Design Pattern.
+2. If it is registered in app.module.ts/ Root Module.
+
+Non-Singleton:
+1.we can register the service, with its own component.
+
+

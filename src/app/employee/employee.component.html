@@ -9,9 +9,13 @@ Name : {{name}}
 
 <button (click)="toggleDiv()" class="btn btn-primary">Toggle</button>
 <div [ngClass]="{'col-md-6':toggle}">
-  <app-employee-list [empList]="employee" [title]="'Employee List'"
+  <!-- <app-employee-list [empList]="employee" [title]="'Employee List'"
   (message)="receiveFromChild($event)"
-  ></app-employee-list>
+  ></app-employee-list> -->
+<!-- Needed to see ngOnchanges in action -->
+  <app-employee-list></app-employee-list>
+  <app-employee-list></app-employee-list>
+  <app-employee-list></app-employee-list>
 </div>
 {{message}}
 
