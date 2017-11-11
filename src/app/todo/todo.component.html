@@ -4,6 +4,25 @@
 
 <!-- {{todoResponse | json}} -->
 
+<form #taskForm="ngForm" (submit)="addTask()">
+  <div class="form-group">
+    <input required class="form-control" type="number" name="userid" [(ngModel)]="task.userId" placeholder="User Id">
+  </div>
+  <!-- <div class="form-group">
+    <input class="form-control" type="number" name="id" [(ngModel)]="task.id" placeholder="Id">
+  </div> -->
+  <div class="form-group">
+    <input required class="form-control" type="text" name="title" [(ngModel)]="task.title" placeholder="Title">
+  </div>
+  <div class="form-group">
+    <input required class="form-control" type="checkbox" name="completed" [(ngModel)]="task.completed" placeholder="Completed">
+  </div>
+  <div>
+    <button [disabled]="taskForm.invalid" type="submit" class="btn btn-primary">Add Task</button>
+  </div>
+</form>
+
+
 <table class="table">
   <thead>
     <tr>

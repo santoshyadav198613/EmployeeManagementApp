@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -13,18 +13,21 @@ import { EmployeeService } from './service/employee/employee.service';
 import { NewemployeeService } from './service/employee/newemployee.service';
 import { TodoComponent } from './todo/todo.component';
 import { AppConstant, AppValues } from './service/appconstants/app.constant';
+import { OnboardingComponent } from './onboarding/onboarding.component';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     EmployeeListComponent,
     DepartmentComponent,
-    TodoComponent
+    TodoComponent,
+    OnboardingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [
     // EmployeeService

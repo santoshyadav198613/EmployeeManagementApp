@@ -32,4 +32,23 @@ we can use control level validtion by using #varName="ngModel"
 and use #varName to access properties of input control.
 
 Reactive Forms:
-1. 
+Why:
+1. When we have complex form to be created.
+2. Gives more control to typescript.
+3. We have controls which should be added dynamically.
+
+How:
+1. import the ReactiveFormsModule module
+Clases:
+AbstractControl
+FormGroup
+FormBuilder
+FormControl
+FormArray
+
+HTML Tags
+formGroup
+formControlName
+formGroupName
+formArrayName
+
