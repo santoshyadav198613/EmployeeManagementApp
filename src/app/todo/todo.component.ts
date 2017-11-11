@@ -1,5 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { TodoService } from '../service/todo/todo.service';
+
+import { ToDoResponse } from '../service/todo/todoresponse';
+import { IAppConstant } from '../service/appconstants/Iapp.constant';
+import { AppConstant } from '../service/appconstants/app.constant';
 
 @Component({
   selector: 'app-todo',
@@ -8,11 +12,13 @@ import { TodoService } from '../service/todo/todo.service';
   providers: [TodoService]
 })
 export class TodoComponent implements OnInit {
-
-  constructor(private todoService: TodoService) { }
+  todoResponse: ToDoResponse[];
+  constructor(private todoService: TodoService,
+    @Inject(AppConstant) private appValues: IAppConstant) { }
 
   ngOnInit() {
-    this.todoService.getToDoList().subscribe((data) => console.log(data));
+    console.log(this.appValues.pageSize);
+    this.todoService.getToDoList().subscribe((data) => this.todoResponse = data);
   }
 
 }

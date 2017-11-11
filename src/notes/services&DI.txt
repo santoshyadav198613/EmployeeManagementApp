@@ -26,4 +26,21 @@ Singleton:
 Non-Singleton:
 1.we can register the service, with its own component.
 
+to register a service:
+ { provide: EmployeeService, useClass: EmployeeService }
 
+ Types of services:
+ 1. Class based service. -- where we use clas to provide service.
+ Non-class based services.
+ 2. Value Provider -- Use static data as service.
+ 3. Factory  -- To be discussed  during routing
+
+
+To create a value provide:
+1.Create interface based on requirement.
+2.Create a file , and use InjectionToken to create a service.
+export let AppConstant = new InjectionToken<IAppConstant>('app.constant'); where app.constant is our file name.
+3.Declare a variable with type of interface and provide all values.
+
+To use value Provider.
+use @Inject() to inject the service.

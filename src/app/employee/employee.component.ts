@@ -6,8 +6,8 @@ import { EmployeeService } from '../service/employee/employee.service';
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css'],
-  providers: [EmployeeService]
+  styleUrls: ['./employee.component.css']
+  // providers: [EmployeeService]
 })
 export class EmployeeComponent implements OnInit, DoCheck, AfterViewInit, OnDestroy {
   name: string = 'Nutan';
