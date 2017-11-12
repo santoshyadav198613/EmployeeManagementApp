@@ -22,22 +22,6 @@
   </div>
 </form>
 
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>UserId</th>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Completed</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let todo of todoResponse">
-      <td>{{todo.userId}}</td>
-      <td>{{todo.id}}</td>
-      <td>{{todo.title}}</td>
-      <td>{{todo.completed}}</td>
-    </tr>
-  </tbody>
-</table>
+<router-outlet></router-outlet>
+<hr>
+<app-todo-list></app-todo-list>

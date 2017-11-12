@@ -8,18 +8,15 @@ import { AppConstant } from '../service/appconstants/app.constant';
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css'],
-  providers: [TodoService]
+  styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  todoResponse: ToDoTask[];
   task: ToDoTask = new ToDoTask();
   constructor(private todoService: TodoService,
     @Inject(AppConstant) private appValues: IAppConstant) { }
 
   ngOnInit() {
     console.log(this.appValues.pageSize);
-    this.todoService.getToDoList().subscribe((data) => this.todoResponse = data);
   }
 
   addTask() {

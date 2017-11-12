@@ -1,0 +1,16 @@
+What is routing:
+1. So we can give navigations in our app
+2. We can pass some data using URLS
+3. We can have secure areas.
+
+How:
+1. import RouterModule
+2. use forRoot method to provide multiple URLS.
+3. dont miss to place  <router-outlet></router-outlet> on root components html
+4. routerLink to give links 
+5. { path: '', redirectTo: 'employee', pathMatch: 'full' } for default view.
+
+For dynamic routes we can use url/:key , key will be replaced with value.
+
+To read the URL data.
+ActivatedRoute service will be used.

@@ -1,14 +1,32 @@
 <!--The whole content below can be removed with the new code.-->
 <div class="container">
-  <h1>
-    Welcome to {{title}}!!
-  </h1>
-<app-onboarding></app-onboarding>
-  <app-employee></app-employee>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Employee Management App</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <a routerLink="todo">Todo</a>
+        </li>
+        <li>
+          <a routerLink="employee">Employee</a>
+        </li>
+        <li>
+          <a routerLink="department">Department</a>
+        </li>
+        <li>
+          <a routerLink="onboarding">OnBoarding</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- <app-onboarding></app-onboarding> -->
+  <!-- <app-employee></app-employee> -->
 
-  <app-department></app-department>
+  <!-- <app-department></app-department> -->
   <!-- <button (click)="toggleEmp()" class="btn btn-primary">Toggle</button> -->
-  <button type="button" class="btn btn-primary" (click)="addEmployee()">Add Employee</button>
-<app-todo></app-todo>
+  <!-- <button type="button" class="btn btn-primary" (click)="addEmployee()">Add Employee</button> -->
+  <!-- <app-todo></app-todo> -->
+  <router-outlet></router-outlet>
 </div>
-

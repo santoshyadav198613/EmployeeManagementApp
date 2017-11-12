@@ -27,3 +27,6 @@ Interceptor:
 How :
 
 1. implement HttpInterceptor interface.
+2. register { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
+3. here multi true means this provider has array of services and we are
+adding our service to existing list.

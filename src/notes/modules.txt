@@ -1,0 +1,12 @@
+1. Routing Module:
+The module with all routing configuration.
+
+We must export RouterModule so it can be used by others.
+
+2. Feature Module:
+This type of module will have all canfiguration information about all 
+related feature.
+
+3. shared module.
+This module will be respnsible for handling all common modules, directives,
+components, pipes, services.
