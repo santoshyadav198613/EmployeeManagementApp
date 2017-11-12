@@ -9,8 +9,10 @@ export class TodoService {
   constructor(private http: HttpClient) { }
 
   getToDoList() {
+    // return this.http.get<ToDoTask[]>('https://jsonplaceholder.typicode.com/todos',
+    //   { headers: new HttpHeaders().set('token', 'thisistoken').set('newtoken', 'thisisnewtoken') });
     return this.http.get<ToDoTask[]>('https://jsonplaceholder.typicode.com/todos',
-      { headers: new HttpHeaders().set('token', 'thisistoken').set('newtoken', 'thisisnewtoken') });
+     { headers: new HttpHeaders().set('token', 'thisistoken') })
   }
 
   addToDoTask(task: ToDoTask) {

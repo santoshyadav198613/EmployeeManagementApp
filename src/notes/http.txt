@@ -19,3 +19,11 @@ Observable:
 it comes from rxjs library, and it is proposed feature for ES7.
 it uses Publish and Subsribe pattern.
 it also gives us data in streams.
+
+
+Interceptor:
+1. Changing or modifying the http request.
+
+How :
+
+1. implement HttpInterceptor interface.

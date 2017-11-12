@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
@@ -14,6 +14,7 @@ import { NewemployeeService } from './service/employee/newemployee.service';
 import { TodoComponent } from './todo/todo.component';
 import { AppConstant, AppValues } from './service/appconstants/app.constant';
 import { OnboardingComponent } from './onboarding/onboarding.component';
+import { HttpInterceptorService } from './interceptor/http-interceptor.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { OnboardingComponent } from './onboarding/onboarding.component';
   providers: [
     // EmployeeService
     { provide: EmployeeService, useClass: NewemployeeService },
-    { provide: AppConstant, useValue: AppValues }
+    { provide: AppConstant, useValue: AppValues },
+    { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
   ],
   bootstrap: [AppComponent]
 })
