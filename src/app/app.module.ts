@@ -17,13 +17,17 @@ import { RoutingModule } from './routing/routing.module';
 import { TodoModule } from './todo/todo.module';
 import { OnboardingModule } from './onboarding/onboarding.module';
 import { SharedModule } from './shared/shared.module';
+import { LoginComponent } from './login/login.component';
+
+import { LoginService } from './service/login/login.service';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeComponent,
     EmployeeListComponent,
     DepartmentComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +39,7 @@ import { SharedModule } from './shared/shared.module';
   providers: [
     // EmployeeService
     { provide: EmployeeService, useClass: NewemployeeService },
+    { provide: LoginService, useClass: LoginService },
     { provide: AppConstant, useValue: AppValues },
     { provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true }
   ],

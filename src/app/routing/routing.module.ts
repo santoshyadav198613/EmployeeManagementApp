@@ -7,7 +7,7 @@ import { DepartmentComponent } from '../department/department.component';
 
 import { OnboardingComponent } from '../onboarding/onboarding.component';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
-
+import { LoginComponent } from '../login/login.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -15,9 +15,10 @@ import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
     RouterModule.forRoot([
       { path: 'employee', component: EmployeeComponent },
       { path: 'department', component: DepartmentComponent },
+      { path: 'login', component: LoginComponent },
       // { path: 'todo', component: TodoComponent },
       { path: 'onboarding', component: OnboardingComponent },
-      { path: '', redirectTo: 'employee', pathMatch: 'full' },
+      { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: '**', component: PagenotfoundComponent }
     ])
   ],

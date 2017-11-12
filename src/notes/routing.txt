@@ -14,3 +14,7 @@ For dynamic routes we can use url/:key , key will be replaced with value.
 
 To read the URL data.
 ActivatedRoute service will be used.
+
+Router servic willbe used to navigate from typescript.
+
+Guards:
