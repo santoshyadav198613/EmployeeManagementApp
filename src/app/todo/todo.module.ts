@@ -9,6 +9,7 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
 
 import { AuthGuard } from '../service/guards/auth.guard';
 import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
+import { TodoeditComponent } from './todoedit/todoedit.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
         },
         canActivateChild: [AuthGuard],
         children: [
-          { path: ':id', component: TodoDetailsComponent }
+          { path: ':id', component: TodoDetailsComponent },
+          { path: ':id/edit', component: TodoeditComponent }
         ]
       },
       // { path: 'todo/:id', component: TodoDetailsComponent }
@@ -32,7 +34,8 @@ import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
   declarations: [
     TodoComponent,
     TodoListComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    TodoeditComponent
   ],
   providers: [TodoService, TodoresolveGuard]
 })

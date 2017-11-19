@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>Edit task for Task Id: {{task.id}}</h2>
+<mat-dialog-content>
+  <form #editForm="ngForm">
+    <div class="form-group" >
+        <input type="text" required class="form-control" [(ngModel)]="task.title" placeholder="Title" name="title">
+    </div>
+    <div class="form-group" >
+        <input type="checkbox"  class="form-control" [(ngModel)]="task.completed" placeholder="Completed" name="completed">
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>No</button>
+  <!-- Can optionally provide a result for the closing dialog. -->
+  <button mat-button (click)="saveData()" >Save</button>
+</mat-dialog-actions>

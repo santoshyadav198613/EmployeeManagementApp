@@ -10,6 +10,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpInterceptorService } from './interceptor/http-interceptor.service';
 import { NewemployeeService } from './service/employee/newemployee.service';
 import { NgModule } from '@angular/core';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
@@ -32,6 +33,7 @@ import { LoginService } from './service/login/login.service';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     SharedModule,
     // TodoModule,
     OnboardingModule,
