@@ -14,7 +14,7 @@ import { NgModule } from '@angular/core';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { RoutingModule } from './routing/routing.module';
-import { TodoModule } from './todo/todo.module';
+// import { TodoModule } from './todo/todo.module';
 import { OnboardingModule } from './onboarding/onboarding.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
@@ -33,7 +33,7 @@ import { LoginService } from './service/login/login.service';
   imports: [
     BrowserModule,
     SharedModule,
-    TodoModule,
+    // TodoModule,
     OnboardingModule,
     RoutingModule
   ],

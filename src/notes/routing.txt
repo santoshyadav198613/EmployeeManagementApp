@@ -38,3 +38,19 @@ To use session:
 https://www.w3schools.com/html/html5_webstorage.asp
 
 
+Lazy Loading:
+What:
+On demand loading.
+
+types:
+1. Lazy
+2. Eager
+
+Steps to implement:
+1. We should have a feature modules.
+2. It should not be part of imports array of any other module.
+3. It should not share anything with other modules.
+4. For routing the parent route path should be set to blank in feature module.
+5. Add a routing configuration in routing module.
+
+NOTE: Least used module should be lazy loaded.

@@ -17,7 +17,7 @@ import { AuthGuard } from '../service/guards/auth.guard';
       { path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },
       { path: 'department', component: DepartmentComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
-      // { path: 'todo', component: TodoComponent },
+      { path: 'todo', loadChildren: '../todo/todo.module#TodoModule' },
       { path: 'onboarding', component: OnboardingComponent, canActivate: [AuthGuard] },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: '**', component: PagenotfoundComponent }

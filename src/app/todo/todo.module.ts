@@ -17,7 +17,7 @@ import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
     SharedModule,
     RouterModule.forChild([
       {
-        path: 'todo', component: TodoComponent, canActivate: [AuthGuard],
+        path: '', component: TodoComponent, canActivate: [AuthGuard],
         resolve: {
           todList: TodoresolveGuard
         },
