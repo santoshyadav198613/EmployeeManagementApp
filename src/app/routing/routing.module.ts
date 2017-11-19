@@ -8,16 +8,17 @@ import { DepartmentComponent } from '../department/department.component';
 import { OnboardingComponent } from '../onboarding/onboarding.component';
 import { PagenotfoundComponent } from '../pagenotfound/pagenotfound.component';
 import { LoginComponent } from '../login/login.component';
+import { AuthGuard } from '../service/guards/auth.guard';
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forRoot([
-      { path: 'employee', component: EmployeeComponent },
-      { path: 'department', component: DepartmentComponent },
+      { path: 'employee', component: EmployeeComponent, canActivate: [AuthGuard] },
+      { path: 'department', component: DepartmentComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
       // { path: 'todo', component: TodoComponent },
-      { path: 'onboarding', component: OnboardingComponent },
+      { path: 'onboarding', component: OnboardingComponent, canActivate: [AuthGuard] },
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: '**', component: PagenotfoundComponent }
     ])

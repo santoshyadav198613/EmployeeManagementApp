@@ -7,13 +7,21 @@ import { TodoService } from '../service/todo/todo.service';
 import { RouterModule } from '@angular/router';
 import { TodoDetailsComponent } from './todo-details/todo-details.component';
 
+import { AuthGuard } from '../service/guards/auth.guard';
+import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
+
+
 @NgModule({
   imports: [
     CommonModule,
     SharedModule,
     RouterModule.forChild([
       {
-        path: 'todo', component: TodoComponent,
+        path: 'todo', component: TodoComponent, canActivate: [AuthGuard],
+        resolve: {
+          todList: TodoresolveGuard
+        },
+        canActivateChild: [AuthGuard],
         children: [
           { path: ':id', component: TodoDetailsComponent }
         ]
@@ -26,6 +34,6 @@ import { TodoDetailsComponent } from './todo-details/todo-details.component';
     TodoListComponent,
     TodoDetailsComponent
   ],
-  providers: [TodoService]
+  providers: [TodoService, TodoresolveGuard]
 })
 export class TodoModule { }

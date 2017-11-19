@@ -18,6 +18,7 @@ import { TodoModule } from './todo/todo.module';
 import { OnboardingModule } from './onboarding/onboarding.module';
 import { SharedModule } from './shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './service/guards/auth.guard';
 
 import { LoginService } from './service/login/login.service';
 @NgModule({
@@ -38,6 +39,7 @@ import { LoginService } from './service/login/login.service';
   ],
   providers: [
     // EmployeeService
+    AuthGuard,
     { provide: EmployeeService, useClass: NewemployeeService },
     { provide: LoginService, useClass: LoginService },
     { provide: AppConstant, useValue: AppValues },

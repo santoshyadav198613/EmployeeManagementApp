@@ -18,3 +18,23 @@ ActivatedRoute service will be used.
 Router servic willbe used to navigate from typescript.
 
 Guards:
+To authorize if user has access to a route.
+To prefetch the data.
+
+
+How:
+1. ng g guard <guard_nam>
+
+Types of guards:
+1. canActivate:
+To restrict the access to routes.
+2. canActivateChild
+To restrict access to child routes.
+3. CanDeactivate :
+To check if we can move away from the route.
+4. Resolve Guards:
+To prefetch the data.
+To use session:
+https://www.w3schools.com/html/html5_webstorage.asp
+
+
