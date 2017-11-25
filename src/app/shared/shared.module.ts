@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { PricePipe } from '../custom/price.pipe';
 import { PricefilterPipe } from '../custom/pricefilter.pipe';
+import { HoverDirective } from '../directive/hover.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -25,8 +26,9 @@ import { PricefilterPipe } from '../custom/pricefilter.pipe';
     MatButtonModule,
     MatDialogModule,
     PricePipe,
-    PricefilterPipe
+    PricefilterPipe,
+    HoverDirective
   ],
-  declarations: [PricePipe, PricefilterPipe]
+  declarations: [PricePipe, PricefilterPipe, HoverDirective]
 })
 export class SharedModule { }

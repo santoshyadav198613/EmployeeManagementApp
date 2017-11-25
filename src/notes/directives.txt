@@ -1,0 +1,13 @@
+Diretives:
+
+What:
+Directives are html tags or properties which modifies our DOM.
+
+types: 
+1. Component
+2. structured directive
+3. attribute directive 
+
+How:
+run:
+ng g directive <directive_name>
