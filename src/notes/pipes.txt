@@ -1,0 +1,18 @@
+Pipes:
+What 
+Pipes are something which can you be used to transform our data on UI.
+
+
+types:
+1. lowercase
+2. uppercase
+3. currency
+4. date 
+5. percent
+
+Custom Filter:
+run:
+ng g pipe <pipe_name>
+
+interface : PipeTransform
+function : transform(value, 1,2.....n)

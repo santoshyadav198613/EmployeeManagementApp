@@ -1,24 +1,30 @@
 <h1>
   {{title}}
 </h1>
+<input type="number" [(ngModel)]="salary" class="form-control" name="salary" placeholder="Salary">
 <table class="table">
   <thead>
     <tr>
       <th>ID</th>
       <th>Name</th>
       <th>Address</th>
+      <th>Salary</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let emp of empList">
+    <tr *ngFor="let emp of empList | pricefilter : salary ">
       <td>
         {{emp.id}}
+        <!-- {{emp.id | percent}} -->
       </td>
       <td>
-        {{emp.name}}
+        {{emp.name | lowercase}}
       </td>
       <td>
-        {{emp.address}}
+        {{emp.address | uppercase}}
+      </td>
+      <td>
+        {{emp.salary | price :'$':1:2:3 }}
       </td>
     </tr>
   </tbody>

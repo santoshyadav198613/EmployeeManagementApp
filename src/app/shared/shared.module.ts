@@ -5,6 +5,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MatButtonModule, MatDialogModule } from '@angular/material';
+import { PricePipe } from '../custom/price.pipe';
+import { PricefilterPipe } from '../custom/pricefilter.pipe';
 @NgModule({
   imports: [
     CommonModule,
@@ -21,8 +23,10 @@ import { MatButtonModule, MatDialogModule } from '@angular/material';
     FormsModule,
     HttpClientModule,
     MatButtonModule,
-    MatDialogModule
+    MatDialogModule,
+    PricePipe,
+    PricefilterPipe
   ],
-  declarations: []
+  declarations: [PricePipe, PricefilterPipe]
 })
 export class SharedModule { }

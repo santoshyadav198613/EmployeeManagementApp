@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Input, OnChanges,
-   OnInit, Output, SimpleChanges } from '@angular/core';
+import {
+  Component, EventEmitter, Input, OnChanges,
+  OnInit, Output, SimpleChanges
+} from '@angular/core';
 import { Employee } from '../../service/employee/employee';
 
 @Component({
@@ -10,11 +12,12 @@ import { Employee } from '../../service/employee/employee';
 export class EmployeeListComponent implements OnChanges {
   @Input() empList: Employee[];
   @Input() title: string;
+  salary: number = 0;
   @Output() message: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
-     console.log(changes);
+    console.log(changes);
   }
 
   sendToParent() {

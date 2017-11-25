@@ -22,6 +22,7 @@ import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './service/guards/auth.guard';
 
 import { LoginService } from './service/login/login.service';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,7 @@ import { LoginService } from './service/login/login.service';
     EmployeeListComponent,
     DepartmentComponent,
     PagenotfoundComponent,
-    LoginComponent
+    LoginComponent    
   ],
   imports: [
     BrowserModule,
