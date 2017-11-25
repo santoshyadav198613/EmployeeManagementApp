@@ -52,6 +52,8 @@ Why:
 
 In case we want the instance of service to be generated at runtime.
 
+Scenario: We want some data in productService from login service.
+
 how:
 
 import { LoginService } from '../login/login.service';

@@ -1,0 +1,21 @@
+Webpack:
+1. It is async a module loader.
+2. It is bundler as well.
+3. Provides a development server.
+4. It is also provides the functionality to create deployment build.
+
+https://github.com/blakecodes/angular4-starter-pack -- min configuration with angular4 and webpack.
+
+How to take webpack config file out:
+ng eject
+
+
+Update angular to latest version:
+
+npm install @angular/animations@latest @angular/common@latest @angular/compiler@latest @angular/core@latest @angular/forms@latest @angular/http@latest @angular/platform-browser@latest @angular/platform-browser-dynamic@latest @angular/router@latest core-js@latest rxjs@latest zone.js@latest --save
+
+To resolve the build error after we install angualr cli 1.5
+
+npm install @angular/compiler-cli@latest --save-dev
+npm install typescript@latest @angular/language-service@latest --save-dev
+
