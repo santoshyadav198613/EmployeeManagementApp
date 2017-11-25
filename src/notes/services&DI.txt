@@ -44,3 +44,26 @@ export let AppConstant = new InjectionToken<IAppConstant>('app.constant'); where
 
 To use value Provider.
 use @Inject() to inject the service.
+
+
+
+Factory:
+Why:
+
+In case we want the instance of service to be generated at runtime.
+
+how:
+
+import { LoginService } from '../login/login.service';
+import { TodoService } from './todo.service';
+import { HttpClient } from '@angular/common/http';
+
+export function todoServiceProvider(loginService: LoginService, http: HttpClient) {
+    return new TodoService(loginService.isLoggedIn, http);
+}
+
+export let todoFactory = {
+    provide: TodoService,
+    useFactory: todoServiceProvider,
+    deps: [LoginService, HttpClient]
+}

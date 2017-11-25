@@ -11,6 +11,7 @@ import { AuthGuard } from '../service/guards/auth.guard';
 import { TodoresolveGuard } from '../service/todo/todoresolve.guard';
 import { TodoeditComponent } from './todoedit/todoedit.component';
 
+import { todoFactory } from '../service/todo/todo.factory';
 
 @NgModule({
   imports: [
@@ -37,6 +38,6 @@ import { TodoeditComponent } from './todoedit/todoedit.component';
     TodoDetailsComponent,
     TodoeditComponent
   ],
-  providers: [TodoService, TodoresolveGuard]
+  providers: [todoFactory, TodoresolveGuard]
 })
 export class TodoModule { }
