@@ -8,6 +8,7 @@ import { MatButtonModule, MatDialogModule } from '@angular/material';
 import { PricePipe } from '../custom/price.pipe';
 import { PricefilterPipe } from '../custom/pricefilter.pipe';
 import { HoverDirective } from '../directive/hover.directive';
+import { PasswordvalidatorDirective } from '../directive/passwordvalidator.directive';
 @NgModule({
   imports: [
     CommonModule,
@@ -27,8 +28,10 @@ import { HoverDirective } from '../directive/hover.directive';
     MatDialogModule,
     PricePipe,
     PricefilterPipe,
-    HoverDirective
+    HoverDirective,
+    PasswordvalidatorDirective
   ],
-  declarations: [PricePipe, PricefilterPipe, HoverDirective]
+  declarations: [PricePipe, PricefilterPipe,
+    HoverDirective, PasswordvalidatorDirective]
 })
 export class SharedModule { }

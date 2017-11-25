@@ -11,3 +11,6 @@ types:
 How:
 run:
 ng g directive <directive_name>
+
+For validation:
+Interface: Validator

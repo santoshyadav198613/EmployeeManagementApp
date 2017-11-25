@@ -4,7 +4,7 @@
     <input appHover required type="text" [(ngModel)]="user.userName" name="username" class="form-control" placeholder="Username">
   </div>
   <div class="form-group">
-    <input appHover required type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="Password">
+    <input appPasswordvalidator appHover required type="password" [(ngModel)]="user.password" name="password" class="form-control" placeholder="Password">
   </div>
   <div>
     <button [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary">
