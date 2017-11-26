@@ -1,0 +1,10 @@
+TDD & BDD.
+
+Write test cases before writing actual code.
+
+1. describe - Define what we are testing.
+2. beforeEach- Before each test case this code will be executed.
+3. TestBed - Create a test module us.
+4. it -  the unit test case to be covered.
+
+Karma - It is a task runner to tun our unit test case on browser.
